@@ -37,11 +37,9 @@ public class Counter {
 						int tempj = j;
 						if (left(tempi, tempj, map, n, m, word, 0)){
 							br++;
-							System.out.println(i+" "+j);
 						}
 						if (right(tempi, tempj, map, n, m, word, 0)){
 							br++;
-							System.out.println(i+" "+j);
 						}
 						if (up(tempi, tempj, map, n, m, word, 0))
 							br++;
@@ -69,8 +67,7 @@ public class Counter {
 	public static boolean right(int tempi, int tempj, char[][] arr, int rows,
 			int cols, char[] word, int counter) {
 		if (counter == word.length) {
-       System.out.println("right");
-			return true;
+       		return true;
 		}
 		if (tempj < cols) {
 			if (arr[tempi][tempj] == word[counter]) {
@@ -84,7 +81,6 @@ public class Counter {
 	public static boolean left(int tempi, int tempj, char[][] arr, int rows,int cols,char[] word,
 			int counter) {
 		if (counter == word.length) {
-			System.out.println("left");
 			
 			return true;
 		}
@@ -92,7 +88,7 @@ public class Counter {
 			if (arr[tempi][tempj] == word[counter]) {
 				counter++;
 				
-			}System.out.println(counter);
+			}
 			return left(tempi, tempj - 1, arr,rows,cols, word, counter);
 		}
 		return false;
